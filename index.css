@@ -1,0 +1,226 @@
+*{
+    font-family: sans-serif;
+    color: white !important;
+}
+
+h1,h2,h3,h4,h5,h6,.collapse li a{
+    font-family: 'Rubik Mono One';
+}
+
+.navbar-collapse{
+   
+    justify-content: center;
+}
+
+.collapse li{
+    margin: 0 20px;
+}
+
+.nav-item{
+    font-size: 20px;
+}
+
+.skills{
+    background: url('images/skills-bg.jpg');
+    display: grid;
+    background-size: cover;
+    grid-template-columns: repeat(4,1fr);
+    border-radius: 20px;
+    box-shadow: 3px 1px 8px wheat;
+    align-items: center;
+}
+
+
+.img-cover{
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3vw;
+    margin-left: 3vw ;
+    margin-right: 3vw;
+    padding: 10px;
+    background: white;
+}
+.projects img{
+    border-radius: 10px;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #04355f;
+    border-radius: 10px;
+}
+
+.text{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+
+}
+
+.overlay-img:hover .overlay{
+    opacity: 1;
+}
+
+.overlay span{
+    font-size: 40px;
+}
+
+input , textarea{
+    padding: 10px;
+    width: 20em;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    color: #333 !important;
+    font-family: sans-serif;
+}
+
+form button{
+    margin: 0 39%;
+}
+
+input:focus,textarea:focus{
+    outline: none;
+}
+
+.self p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.loadActive{
+    background: #333;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover{
+    transition-duration: 2s;
+}
+
+#one{
+    animation: jump 5s linear infinite;
+    
+}
+
+@keyframes jump {
+    0%{transform: translateY(0);}
+    25%{transform: translateY(-20);}
+    75%{transform: translateY(20);}
+    100%{transform: translateY(0);}
+}
+@keyframes jump2 {
+    0%{top:0; bottom:0;}
+    25%{top:0; bottom:50px;}
+    75%{top:50px; bottom:0;}
+    100%{top:0;bottom:0;}
+}
+
+
+.filled {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+@media screen and (max-width:1024px) {
+    .img-cover{
+        margin-left: 2.5vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .skills{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .overlay-img{
+        margin-bottom: 20px;
+    }
+
+    .navbar-toggler{
+        margin-left: 3em;
+        margin-top: 0.5em;
+    
+    }
+
+    h1{
+        font-size: 40px !important;
+    }
+
+    .material-symbols-outlined{
+        font-size: 38px !important;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .navbar-toggler{
+        margin-left: 0.7em;
+    }
+
+    .self p, p{
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 30px !important;
+    }
+
+    .projects img{
+        width: 350px !important;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .projects img{
+        width: 300px !important;
+    }
+
+    .skills img{
+        width: 60px !important;
+    }
+
+    .img-cover{
+        height: 80px;
+    }
+
+    .skills{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width:321px) {
+    input,textarea{
+        width: 16em;
+    }
+
+    .projects img{
+        width: 250px !important;
+    }
+
+    form button{
+        margin: 0 35%;
+    }
+}
